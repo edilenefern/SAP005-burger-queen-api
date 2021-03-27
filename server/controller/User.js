@@ -60,6 +60,7 @@ class Controller {
       next();
     }
   }
+  
 
   static async deleteUsers(req, res, next) {
     const id = req.params.id;
