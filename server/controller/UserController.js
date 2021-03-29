@@ -23,7 +23,6 @@ const UserController = {
         res.status(201).json(result); //return with ID -> 201 (CREATED)
       })
       .catch(next);
-      
   },
 };
 
