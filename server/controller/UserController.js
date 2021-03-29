@@ -1,18 +1,19 @@
-const database = require('../db/models')
+const database = require('../db/models/index')
 
 const UserController = {
   all(req, res, next) {
-    User.findAll()
+    Users.findAll()
       .then((result) => {
         res.json(result);
+       
       })
       .catch(next);
   },
 
   create(req, res, next) {
-    const { name, email, pasword, role, restaurant } = req.body;
+    const { name, email, password, role, restaurant } = req.body;
 
-    User.create({
+    Users.create({
       name,
       email,
       password,
