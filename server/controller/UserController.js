@@ -1,10 +1,30 @@
-const UsersDB = require('../db/models')
+const database = require('../db/models')
 
-class UserController {
-      static async getusers (req,res){
-        const users = await UsersDB.users.findAll()
-        res.status(200).json(users)
-      }
-     
-    };
-    module.exports = {UserController}
+const UserController = {
+  all(req, res, next) {
+    User.findAll()
+      .then((result) => {
+        res.json(result);
+      })
+      .catch(next);
+  },
+
+  create(req, res, next) {
+    const { name, email, pasword, role, restaurant } = req.body;
+
+    User.create({
+      name,
+      email,
+      password,
+      role,
+      restaurant
+    })
+      .then((result) => {
+        res.status(201).json(result); //return with ID -> 201 (CREATED)
+      })
+      .catch(next);
+      
+  },
+};
+
+module.exports = UserController;
