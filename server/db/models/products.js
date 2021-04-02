@@ -34,3 +34,4 @@ module.exports = (sequelize, DataTypes) => {
   );
   return Products;
 };
+// comentário
