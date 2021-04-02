@@ -11,6 +11,8 @@ class UserController {
   }
   
 
+// comentário
+
   static async getUserById(req, res) {
     const { id } = req.params;
     try {
