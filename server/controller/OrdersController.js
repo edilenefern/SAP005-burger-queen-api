@@ -1,5 +1,4 @@
 const database = require("../db/models");
-
 class OrdersController {
   static async getAllOrder(req, res) {
     try {
