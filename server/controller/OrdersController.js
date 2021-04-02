@@ -1,5 +1,6 @@
 const database = require("../db/models");
 class OrdersController {
+  
   static async getAllOrder(req, res) {
     try {
       const orders = await database.Orders.findAll();
