@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-    
   }
   ProductsOrders.init(
     {
@@ -25,4 +24,3 @@ module.exports = (sequelize, DataTypes) => {
   );
   return ProductsOrders;
 };
-// comentário

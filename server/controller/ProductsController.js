@@ -99,6 +99,5 @@ class ProductsController {
     }
   }
 }
-// comentário
 
 module.exports = ProductsController;

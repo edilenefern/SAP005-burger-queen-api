@@ -9,9 +9,6 @@ class UserController {
       return res.status(400).json({ error: "Usuário não encontrado" });
     }
   }
-  
-
-// comentário
 
   static async getUserById(req, res) {
     const { id } = req.params;

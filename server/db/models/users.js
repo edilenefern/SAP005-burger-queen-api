@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         as: "orders",
       });
     }
-
   }
   Users.init(
     {
@@ -30,9 +29,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-    
- 
-
   return Users;
 };
-// comentário
